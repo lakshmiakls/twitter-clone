@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone by Lakshmi </title>
+    <meta name="description" content="Twitter Clone to understand Node Api concepts" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/tweet.css">
+    <script src="https://kit.fontawesome.com/bd94e6d4cb.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container home-page">
+        <div class="navigation-container">
+            <div class="navigation">
+                <div class="logo">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="home-link">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="profile-container">
+                    <div class="profile"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="tweets-search-container">
+                <input
+                type="text"
+                placeholder="Search Twitter"
+                name=""
+                id="user-search-input"
+                onkeyup="enterSearch(e)"
+                />
+                <i class="fas fa-search fa-flip-horizontal" onclick="getTwitterData()"></i>
+            </div>
+
+            <div class="tweets-list">
+                <div class="tweets-welcome-message">
+                    <h4>Welcome to Twitter</h4>
+                    <p>Try searching for people, topics or keywords</p>
+                </div>
+            </div>
+            <div class="next-page-container" onclick="onNextPage()">
+                <i class="fas fa-arrow-down"></i>
+            </div> 
+        </div>
+
+            <div class="tweets-sidebar-container">
+                <div class="tweets-sidebar">
+                    <div class="tweets-trending">
+                        <h5>Trends for you</h5>
+                        <ul>
+                            <li onclick="selectTrend(this)">#Messi</li>
+                            <li onclick="selectTrend(this)">#Euro2020Final</li>
+                            <li onclick="selectTrend(this)">#BTSptd</li>
+                            <li onclick="selectTrend(this)">#BBMAs</li>
+                            <li onclick="selectTrend(this)">#BTS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <script src="js/index.js" async defer></script>
+</body>
+</html>
